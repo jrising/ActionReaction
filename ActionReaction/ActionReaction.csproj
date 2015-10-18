@@ -7,7 +7,6 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>ActionReaction</RootNamespace>
     <AssemblyName>ActionReaction</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,6 +30,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -63,6 +63,14 @@
     <Compile Include="Interfaces\HtmlInterface\HtmlArgumentTree.cs" />
     <Compile Include="Interfaces\HtmlInterface\HtmlInterface.cs" />
     <Compile Include="Interfaces\HtmlInterface\HtmlUtilities.cs" />
+    <Compile Include="ActionEnvironment.cs" />
+    <Compile Include="ArgumentTree.cs" />
+    <Compile Include="IMessageReceiver.cs" />
+    <Compile Include="FastSerializer\FastSerializerInterfaces.cs" />
+    <Compile Include="FastSerializer\IFastSerializable.cs" />
+    <Compile Include="FastSerializer\SerializationReader.cs" />
+    <Compile Include="FastSerializer\SerializationWriter.cs" />
+    <Compile Include="FastSerializer\StandaloneReceiver.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -22,12 +22,7 @@
  *      -----------------------------------------------------------
  * The shared state available to all actions
 \******************************************************************/
-using System;
 using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.IO;
-using System.Reflection;
-using System.Xml;
 using ActionReaction.Actions;
 using ActionReaction.Interfaces;
 using ActionReaction.Evaluations;
@@ -35,7 +30,7 @@ using ActionReaction.Evaluations;
 namespace ActionReaction
 {
     // The plugin environment combines a globally accessible environment
-    public class ActionEnvironment : ICloneable
+    public class ActionEnvironment
     {
         protected IMessageReceiver receiver;
 

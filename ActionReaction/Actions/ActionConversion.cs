@@ -11,7 +11,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using ActionReaction
+using ActionReaction;
 using ActionReaction.Evaluations;
 using ActionReaction.Interfaces;
 

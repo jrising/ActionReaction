@@ -10,7 +10,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using FastSerializer;
+using ActionReaction.FastSerializer;
 
 namespace ActionReaction.Evaluations
 {
