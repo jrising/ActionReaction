@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{05E3A79C-E6F1-4AA7-B427-CF033E6E567A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ActionReaction</RootNamespace>
+    <AssemblyName>ActionReaction</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Externalconsole>true</Externalconsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Actions\Aborter.cs" />
+    <Compile Include="Actions\ActionConversion.cs" />
+    <Compile Include="Actions\ArgumentsHandler.cs" />
+    <Compile Include="Actions\BestContinuation.cs" />
+    <Compile Include="Actions\FormableAction.cs" />
+    <Compile Include="Actions\HandlerWrapper.cs" />
+    <Compile Include="Actions\IActions.cs" />
+    <Compile Include="Actions\LastFailure.cs" />
+    <Compile Include="Actions\QueueArena.cs" />
+    <Compile Include="Actions\TryValues.cs" />
+    <Compile Include="Actions\UnitaryHandler.cs" />
+    <Compile Include="Evaluations\Agents.cs" />
+    <Compile Include="Evaluations\CallableAsContinuation.cs" />
+    <Compile Include="Evaluations\Callables.cs" />
+    <Compile Include="Evaluations\Continuations.cs" />
+    <Compile Include="Evaluations\Evaluables.cs" />
+    <Compile Include="Evaluations\Failures.cs" />
+    <Compile Include="Evaluations\IArena.cs" />
+    <Compile Include="Evaluations\ImmediateArena.cs" />
+    <Compile Include="Evaluations\Nops.cs" />
+    <Compile Include="Interfaces\BaseArgumentTypes.cs" />
+    <Compile Include="Interfaces\DerivedArgumentTypes.cs" />
+    <Compile Include="Interfaces\Interfaces.cs" />
+    <Compile Include="Interfaces\InterfaceUtilities.cs" />
+    <Compile Include="Interfaces\Testing.cs" />
+    <Compile Include="Interfaces\HtmlInterface\HtmlArgumentTree.cs" />
+    <Compile Include="Interfaces\HtmlInterface\HtmlInterface.cs" />
+    <Compile Include="Interfaces\HtmlInterface\HtmlUtilities.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
