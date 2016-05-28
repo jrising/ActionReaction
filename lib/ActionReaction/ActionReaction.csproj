@@ -7,8 +7,6 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>ActionReaction</RootNamespace>
     <AssemblyName>ActionReaction</AssemblyName>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -73,6 +71,11 @@
     <Compile Include="FastSerializer\SerializationReader.cs" />
     <Compile Include="FastSerializer\SerializationWriter.cs" />
     <Compile Include="FastSerializer\StandaloneReceiver.cs" />
+    <Compile Include="Conversions\Numeric.cs" />
+    <Compile Include="Conversions\Multiple.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Conversions\" />
+  </ItemGroup>
 </Project>
