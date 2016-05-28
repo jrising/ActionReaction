@@ -1,2 +1,2 @@
 language: csharp
-solution: ActionReaction/ActionReaction.sln
+solution: lib/ActionReaction/ActionReaction.sln

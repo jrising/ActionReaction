@@ -31,20 +31,18 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\..\tool\Single\packages\NUnit.3.2.1\lib\net40\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Actions\Aborter.cs" />
     <Compile Include="Actions\ActionConversion.cs" />
     <Compile Include="Actions\ArgumentsHandler.cs" />
-    <Compile Include="Actions\BestContinuation.cs" />
     <Compile Include="Actions\FormableAction.cs" />
     <Compile Include="Actions\HandlerWrapper.cs" />
     <Compile Include="Actions\IActions.cs" />
-    <Compile Include="Actions\LastFailure.cs" />
     <Compile Include="Actions\QueueArena.cs" />
-    <Compile Include="Actions\TryValues.cs" />
     <Compile Include="Actions\UnitaryHandler.cs" />
     <Compile Include="Evaluations\Agents.cs" />
     <Compile Include="Evaluations\CallableAsContinuation.cs" />
@@ -73,9 +71,18 @@
     <Compile Include="FastSerializer\StandaloneReceiver.cs" />
     <Compile Include="Conversions\Numeric.cs" />
     <Compile Include="Conversions\Multiple.cs" />
+    <Compile Include="Actions\Internal\Aborter.cs" />
+    <Compile Include="Actions\Internal\BestContinuation.cs" />
+    <Compile Include="Actions\Internal\LastFailure.cs" />
+    <Compile Include="Actions\Internal\TryValues.cs" />
+    <Compile Include="Tests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Conversions\" />
+    <Folder Include="Actions\Internal\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
